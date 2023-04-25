@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addItem, deleteItem } from "../actions/cartAction";
+import { addItem } from "../actions/cartAction";
 
 const ProductItem = (props) => {
-    const {item, addToCartHandler} = props;
+    const {addToCartHandler:addCartHandler } = useContext(UserContext);
+    const {item} = props;
     const state = useSelector((state) => state);
     const dispatch = useDispatch(item);
 
     const onAddItem = () => {
         dispatch(addItem(item));
-        addToCartHandler(item);
+        addCartHandler(item);
     }
     return (
         <div className="col-sm-4">

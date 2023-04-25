@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from "react-dom/client";
+import React, { useState, useEffect, createContext } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Provider } from "react-redux";
@@ -48,6 +47,7 @@ const dummuyItems = [
 
 function App() {
   const [products, setProducts] = useState(dummuyItems);
+  const UserContext = createContext();
 
   useEffect(() => {
     setProducts(() => [...products]);
@@ -76,16 +76,18 @@ function App() {
   }
 
   return (
-    <Provider store={storeItemCartReducer}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}> 
-            <Route index element={<ProductItems products={products} addToCartHandler={addToCartHandler} />} />
-            <Route path="cart" element={<UserCart deleteToCartHandler={deleteToCartHandler} />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </Provider>
+    <UserContext.Provider addToCartHandler={addToCartHandler} deleteToCartHandler={deleteToCartHandler}>
+      <Provider store={storeItemCartReducer}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}> 
+              <Route index element={<ProductItems products={products} />} />
+              <Route path="cart" element={<UserCart />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </Provider>
+      </UserContext.Provider>
   );
 }
 

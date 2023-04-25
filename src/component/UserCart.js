@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addItem, deleteItem } from "../actions/cartAction";
+import { deleteItem } from "../actions/cartAction";
 import { Link } from "react-router-dom";
 
 import "./components.css";
 
 const UserCart = (props) => {
-  const {deleteToCartHandler} = props;
+  const {deleteToCartHandler:deleteCartHandler } = useContext(UserContext);
+
   const cartItems = useSelector((state) => state);
   const dispatch = useDispatch();
   const [cartTotalValue, setCartTotalValue] = useState(0)
@@ -20,7 +21,7 @@ const UserCart = (props) => {
 
   const deleteItemHandler = (cartItem) => {
     dispatch(deleteItem(cartItem));
-    deleteToCartHandler(cartItem);
+    deleteCartHandler(cartItem);
   }
 
   return (

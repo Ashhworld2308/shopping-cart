@@ -1,8 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { useSelector, useDispatch } from "react-redux";
-
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     const state = useSelector((state) => state);
