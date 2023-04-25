@@ -2,10 +2,11 @@ import React, { useState, useEffect, createContext } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Provider } from "react-redux";
-import { storeItemCartReducer } from "./store";
+import store from "./store";
 import Layout from "./component/common/Layout";
 import ProductItems from './component/ProductItems';
 import UserCart from "./component/UserCart";
+import authContext from './Context/authContext';
 
 const dummuyItems = [
   {
@@ -76,8 +77,8 @@ function App() {
   }
 
   return (
-    <UserContext.Provider addToCartHandler={addToCartHandler} deleteToCartHandler={deleteToCartHandler}>
-      <Provider store={storeItemCartReducer}>
+    <authContext.Provider value={{addToCartHandler:addToCartHandler, deleteToCartHandler:deleteToCartHandler}}>
+      <Provider store={store}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Layout />}> 
@@ -87,7 +88,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </Provider>
-      </UserContext.Provider>
+      </authContext.Provider>
   );
 }
 

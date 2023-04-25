@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext, userContext } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteItem } from "../actions/cartAction";
 import { Link } from "react-router-dom";
+import authContext from '../Context/authContext';
+
 
 import "./components.css";
 
 const UserCart = () => {
-  const {deleteToCartHandler:deleteCartHandler } = useContext(UserContext);
+  const {deleteToCartHandler:deleteCartHandler } = useContext(authContext);
 
   const cartItems = useSelector((state) => state);
   const dispatch = useDispatch();
