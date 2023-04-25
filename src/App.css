@@ -24,3 +24,31 @@ button {
 .cart {
   text-align: center;
 }
+
+.navbar {
+  margin-bottom: 50px;
+  border-radius: 0;
+}
+
+/* Remove the jumbotron's default bottom margin */ 
+  .jumbotron {
+  margin-bottom: 0;
+  padding: 0 !important;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+.item-price-style {
+  float: right;
+  margin: 15px;
+}
+
+.bg-primary {
+  background-color: #337ab7;
+  margin-left: 2px;
+  margin-bottom: 3px;
+}
