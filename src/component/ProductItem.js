@@ -19,7 +19,7 @@ const ProductItem = (props) => {
                 <div className="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" className="img-responsive col-lg-12" alt="Image" /></div>
                 <div className="panel-footer">
                     <button type="button" disabled={item.isCartItem} className="btn btn-sm btn-default" onClick={onAddItem}>Add to Cart</button>
-                    <span className="item-price-style"><label>$ {item.price}</label></span>
+                    <span className="item-price-style"><label>&euro; {item.price}</label></span>
                 </div>
             </div>
         </div>
