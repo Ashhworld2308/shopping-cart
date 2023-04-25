@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import "./components.css";
 
-const UserCart = (props) => {
+const UserCart = () => {
   const {deleteToCartHandler:deleteCartHandler } = useContext(UserContext);
 
   const cartItems = useSelector((state) => state);
