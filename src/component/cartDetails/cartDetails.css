@@ -1,0 +1,32 @@
+.bank-icon-style {
+    width: 1rem;
+    margin-right: 5px;
+}
+
+.valid-thru-style {
+    width: 50%;
+    margin-top: 0;
+    margin-right: 0;
+    /* height: 38px; */
+}
+
+.month-dropdown-style {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.year-dropdown-style {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.upi-payment-option-button {
+    margin: 0 -1px !important;
+    height: 37.6px;
+    border-color: lightgrey;
+    border-left: none;
+}
+
+.upi-payment-option-input {
+    border-right: none;
+}

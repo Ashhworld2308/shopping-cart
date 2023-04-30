@@ -52,3 +52,7 @@ footer {
   margin-left: 2px;
   margin-bottom: 3px;
 }
+
+.cart-text-decoration {
+  text-decoration: none;
+}

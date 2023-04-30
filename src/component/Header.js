@@ -10,24 +10,32 @@ const Header = () => {
                 <h1>Ashlesh Online Store</h1>
             </div>
         </div>
-        <nav className="navbar navbar-inverse">
-            <div className="container-fluid">
-                <div className="navbar-header">
-                    <a className="navbar-brand" href="#"><img src="https://placehold.it/150x20?text=COMPANYLOGO" 
-                        className="img-responsive col-lg-12" alt="Image" /></a>
-                </div>
-                <div className="collapse navbar-collapse" id="myNavbar">
-                    <ul className="nav navbar-nav navbar-right">
-                        <li>
-                            <Link to="/cart" >
-                                <span className="glyphicon glyphicon-shopping-cart position-relative"></span> Cart 
-                                <span className="badge bg-primary">{!!state.length && state.length}</span>
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
+        
+        <nav className="navbar navbar-expand-lg bg-light">
+          <div className="container-fluid">
+            <a className="navbar-brand" href="#">Navbar</a>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#">Link</a>
+                </li>
+              </ul>
+              <div className="d-flex" role="search">
+                 <Link to="/cart" className="cart-text-decoration">
+                    <i class="bi bi-cart3"></i> Cart 
+                    <span className="badge text-bg-secondary">{!!state.length && state.length}</span>
+                </Link>
+              </div>
             </div>
+          </div>
         </nav>
+        
     </>);
 };
 

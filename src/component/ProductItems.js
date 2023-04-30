@@ -12,20 +12,23 @@ function ProductItems({products}) {
   const onSearchFilterHandler = (event) => {
     const value = event.target.value;
     setSearchValue(value);
+    
     const tempProducts = products.filter((item) => {
       if (item.name.toLowerCase().includes(value.toLowerCase())) { return item; }
     });
+
     setFilteredProducts(() => tempProducts);
   }
-  return <div className="container">
+  return (<div className="container">
           <div className="row">
-            <input type="text" name="search" placeholder="Serch Products" value={searchValue} onChange={(event) => onSearchFilterHandler(event)} />
+            <input type="text" name="search" placeholder="Serch Products" value={searchValue} 
+            onChange={(event) => onSearchFilterHandler(event)} />
           </div>
           <div className="row">
             {!filteredProducts.length && <label>No Products Available</label>}
             {!!filteredProducts && filteredProducts.map((item, index) => <ProductItem item={item} key={index} />)}
           </div>
-        </div>;
+        </div>);
 }
 
 export default ProductItems;

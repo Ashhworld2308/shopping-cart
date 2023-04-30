@@ -12,28 +12,40 @@ const dummuyItems = [
   {
     id: 1,
     name: "Electronic Car",
-    price: 10,
+    price: 1000,
+    packagingCharges: 0,
+    deliveryCharge: 0,
+    discount: 5,
     category: "Test",
     isCartItem: false
   },
   {
     id: 2,
     name: "teddy Bear",
-    price: 100,
+    price: 750,
+    packagingCharges: 0,
+    deliveryCharge: 0,
+    discount: 5,
     category: "Test",
     isCartItem: false
   },
   {
     id: 3,
     name: "Bag",
-    price: 110,
+    price: 1200,
+    packagingCharges: 0,
+    deliveryCharge: 0,
+    discount: 0,
     category: "Test",
     isCartItem: false
   },
   {
     id: 4,
     name: "Baby Bed",
-    price: 210,
+    price: 3600,
+    packagingCharges: 0,
+    deliveryCharge: 0,
+    discount: 10,
     category: "Test",
     isCartItem: false
   },
@@ -41,6 +53,9 @@ const dummuyItems = [
     id: 5,
     name: "Chocolates",
     price: 410,
+    packagingCharges: 0,
+    deliveryCharge: 0,
+    discount: 0,
     category: "Test",
     isCartItem: false
   }

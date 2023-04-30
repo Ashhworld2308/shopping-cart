@@ -1,10 +1,17 @@
 .total-items {
 	padding-left: 0;
+    margin: 20px 0;
+}
+
+.text-right {
+    text-align: center;
+    margin: 20px 0;
 }
 
 .price-display {
-	border-top: 1px solid rgba(0,0,0,.1); 
+	border-top: 3px dotted rgba(0,0,0,.1); 
 	padding: 2vh 0;
+    margin: 20px 0;
 }
 
 body{
@@ -21,7 +28,7 @@ body{
 }
 .card{
     margin: auto;
-    max-width: 950px;
+    max-width: 1500px;
     width: 90%;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 1rem;
@@ -83,7 +90,7 @@ a{
 }
 .close{
     margin-left: auto;
-    font-size: 1.7rem;
+    font-size: 0.7rem;
 }
 img{
     width: 3.5rem;
@@ -190,4 +197,28 @@ a:hover{
 
 .cart {
 	text-align: left;
+}
+
+.remove-item-class {
+    margin: 0;
+    height: 35px;
+}
+
+.add-item-class {
+    margin: 0;
+    height: 35px;
+}
+
+.input-count-class {
+    margin: 0;
+    height: 35px;
+}
+
+.cart-price {
+    text-align: center;
+}
+
+
+.discount-price {
+    color: green;
 }
