@@ -1,94 +1,100 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { STATES } from "../../constants";
 
 const AddressObj = {
-    name: "",
-    mobileNumber: "",
-    pincode: 0,
-    locality: "",
-    address: "",
-    city: "",
-    state: "dadasdas",
-    landmark: "",
-    alternetMobileNumber: "",
-    addressType: ""
+    name: "Ashlesh Dhanvalkar",
+    mobileNumber: "9028227337",
+    pincode: 129393,
+    locality: "Narhe",
+    address: "Pune Maharashta",
+    city: "Pune",
+    state: "Andaman & Nicobar Islands",
+    landmark: "Opp to Sai Leela Society",
+    alternetMobileNumber: "9292929292",
+    addressType: "home"
 }
 const AddressDetails = (props) => {
-    const { onSaveAddressHandlers } = props;
-    const [addressDetail, setAddressDetails] = useState(AddressObj);
+    const { onSaveAddressHandler } = props;
+    const [addressDetail, setAddressDetails] = useState(() => AddressObj);
 
-    const onSaveAddressHandler = (event) => {
-        event.preventDefault();
-        console.log(event.target, addressDetail);
-    }
+    useEffect(() => {
+        setAddressDetails(() => addressDetail);
+    }, [addressDetail]);
 
-    const onFormChangeHandler = (event) => {
-        console.log(event, AddressObj[event.target.id]);
+    const onFormChangeHandler = async (event) => {
         if(event.target.type == "radio"){
-            AddressObj[event.target.name] = event.target.value;
+            addressDetail[event.target.name] = event.target.value;
         } else {
-            AddressObj[event.target.id] = event.target.value;
+            addressDetail[event.target.id] = event.target.value;
         }
 
-        setAddressDetails(() => AddressObj);
+        await setAddressDetails(() => {
+            return addressDetail;
+        });
     } 
 
+    const onSaveAddressSubmit = (event) => {
+        event.preventDefault();
+        onSaveAddressHandler(addressDetail);
+    }
+
     return <>
-        <form class="row g-3 needs-validation" novalidate onSubmit={onSaveAddressHandler}>
-            <div class="col-md-5">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" required onChange={onFormChangeHandler} />
+        <form className="row g-3 needs-validation" onSubmit={onSaveAddressHandler}>
+            <div className="col-md-5">
+                <label className="form-label">Name</label>
+                <input type="text" className="form-control" id="name" required onChange={onFormChangeHandler} value={addressDetail.name} />
             </div>
-            <div class="col-md-5">
-                <label for="mobileNumber" class="form-label">10 Digit Mobile Number</label>
-                <input type="number" class="form-control" id="mobileNumber" required onChange={onFormChangeHandler} />
+            <div className="col-md-5">
+                <label className="form-label">10 Digit Mobile Number</label>
+                <input type="number" className="form-control" id="mobileNumber" required onChange={onFormChangeHandler} value={addressDetail.mobileNumber} />
             </div>
-            <div class="col-md-5">
-                <label for="pincode" class="form-label">Pin Code</label>
-                <input type="number" class="form-control" id="pincode" required onChange={onFormChangeHandler} />
+            <div className="col-md-5">
+                <label className="form-label">Pin Code</label>
+                <input type="number" className="form-control" id="pincode" required onChange={onFormChangeHandler} value={addressDetail.pincode} />
             </div>
-            <div class="col-md-5">
-                <label for="locality" class="form-label">Locality</label>
-                <input type="text" class="form-control" id="locality" required onChange={onFormChangeHandler} />
+            <div className="col-md-5">
+                <label className="form-label">Locality</label>
+                <input type="text" className="form-control" id="locality" required onChange={onFormChangeHandler} value={addressDetail.locality} />
             </div>
-            <div class="col-md-10">
-                <label for="address" class="form-label">Address (Area and Street)</label>
-                <textarea type="textarea" class="form-control" id="address" required onChange={onFormChangeHandler} />
+            <div className="col-md-10">
+                <label className="form-label">Address (Area and Street)</label>
+                <textarea type="textarea" className="form-control" id="address" required onChange={onFormChangeHandler} value={addressDetail.address} />
             </div>
-            <div class="col-md-5">
-                <label for="city" class="form-label">City/District/Town</label>
-                <input type="text" class="form-control" id="city" required onChange={onFormChangeHandler} />
+            <div className="col-md-5">
+                <label className="form-label">City/District/Town</label>
+                <input type="text" className="form-control" id="city" required onChange={onFormChangeHandler} value={addressDetail.city} />
             </div>
-            <div class="col-md-5">
-                <label for="state" class="form-label">State</label>
-                <select class="form-select" id="state" required onChange={onFormChangeHandler}>
-                    <option value="" disabled>Select State</option>
-                    {STATES.map((state, index) => {
-                        return <option value={index}>{state}</option>
+            <div className="col-md-5">
+                <label className="form-label">State</label>
+                <select className="form-select" id="state" required onChange={(e) => onFormChangeHandler(e)} defaultValue={addressDetail.state}>
+                    <option value="">Select State</option>
+                    {STATES.map((state) => {
+                        return <option value={state} key={state} selected={state == addressDetail.state}>{state}</option>
                     })}
                 </select>
             </div>
-            <div class="col-md-5">
-                <label for="landmark" class="form-label">Landmark(Optional)</label>
-                <input type="text" class="form-control" id="landmark" required onChange={onFormChangeHandler} />
+            <div className="col-md-5">
+                <label className="form-label">Landmark(Optional)</label>
+                <input type="text" className="form-control" id="landmark" required onChange={onFormChangeHandler} value={addressDetail.landmark} />
             </div>
-            <div class="col-md-5">
-                <label for="alternetMobileNumber" class="form-label">Alternet Phone(Optional)</label>
-                <input type="text" class="form-control" id="alternetMobileNumber" onChange={onFormChangeHandler} />
+            <div className="col-md-5">
+                <label className="form-label">Alternet Phone(Optional)</label>
+                <input type="text" className="form-control" id="alternetMobileNumber" onChange={onFormChangeHandler} value={addressDetail.alternetMobileNumber}  />
             </div>
-            <div class="col-12">
-                <label for="alternet" class="form-label">Address Type</label><br/>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="addressType" id="inlineRadio1" value="home" onChange={onFormChangeHandler} />
-                    <label class="form-check-label" for="inlineRadio1">Home (All Day delivery)</label>
+            <div className="col-12">
+                <label className="form-label">Address Type</label><br/>
+                <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="radio" name="addressType" id="inlineRadio1" value="home" onChange={onFormChangeHandler} checked={addressDetail.addressType === "home"} />
+                    <label className="form-check-label">Home (All Day delivery)</label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="addressType" id="inlineRadio2" value="work" onChange={onFormChangeHandler} />
-                    <label class="form-check-label" for="inlineRadio2">Work (Delivery between 10AM - 6PM)</label>
+                <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="radio" name="addressType" id="inlineRadio2" value="work" onChange={onFormChangeHandler} checked={addressDetail.addressType === "work"} />
+                    <label className="form-check-label">Work (Delivery between 10AM - 6PM)</label>
                 </div>
             </div>
-            <div class="col-12">
-                <button class="btn btn-lg btn-primary" type="submit" onClick={onSaveAddressHandler}>Submit form</button>
+            <div className="col-12">
+                <button className="btn btn-lg btn-primary" type="submit" onClick={onSaveAddressSubmit}>Save And Deliver Here</button>
+                <button className="btn btn-lg btn-outline-dark" type="submit" onClick={onSaveAddressHandler}>Cancel</button>
             </div>
         </form>
     </>

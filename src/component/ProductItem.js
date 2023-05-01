@@ -10,18 +10,20 @@ const ProductItem = (props) => {
     const dispatch = useDispatch(item);
 
     const onAddItem = () => {
+        item.quantity = 1;
+        item.totalPrice = item.price;
         dispatch(addItem(item));
         addToCartHandler(item);
     }
     return (
         <div className="col-sm-4 mb-1 mb-sm-0">
-            <div class="card">
-              <img src="https://placehold.it/150x80?text=IMAGE" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">{item.name}</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div className="card">
+              <img src="https://placehold.it/150x80?text=IMAGE" className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">{item.name}</h5>
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
-              <div class="card-body">
+              <div className="card-body">
                 <button type="button" disabled={item.isCartItem} className="btn btn-sm btn-default" onClick={onAddItem}>Add to Cart</button>
                     <span className="item-price-style"><label>&#8377; {item.price}</label></span>
               </div>

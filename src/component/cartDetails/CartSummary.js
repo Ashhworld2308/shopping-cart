@@ -6,17 +6,9 @@ const CartSummary = (props) => {
     const [summary, setSummary] = useState({});
     const [finalTotal, setFinalTotal] = useState(0);
 
-
     useEffect(() => {
-        // const TotalValue = cartItems.reduce((x, y) => x + y.price, 0);
-        // const discount = cartItems.reduce((x, y) => x + (y.price * y.discount) / 100, 0);
-        // const packageCharges = cartItems.reduce((x, y) => x + y.packagingCharges, 0);
-        // const deliveryCharge = cartItems.reduce((x, y) => x + y.deliveryCharge, 0);
-
         const cartSummary = getCartValues(cartItems);
-
         setSummary(cartSummary)
-
         setFinalTotal(cartSummary.finalCartValue);
     }, [cartItems]);
 
@@ -44,7 +36,6 @@ const CartSummary = (props) => {
             <div className="col total-items">TOTAL PRICE</div>
             <div className="col text-right">&#8377; {finalTotal}</div>
         </div>
-        <button className="btn btn-primary">CHECKOUT</button>
     </div>
 }
 

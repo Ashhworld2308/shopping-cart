@@ -1,4 +1,4 @@
-import { ADD_ITEM, DELETE_ITEM } from "../actionTypes/actionTypes";
+import { ADD_ITEM, DELETE_ITEM, UPDATE_ITEM_QUANTITY } from "../actionTypes/actionTypes";
 
 const addItem = (product) => {
   return {
@@ -14,4 +14,12 @@ const deleteItem = (product) => {
   };
 };
 
-export { addItem, deleteItem };
+const updateItemsQuntity = (product, type) => {
+  return {
+    type: UPDATE_ITEM_QUANTITY,
+    product: product,
+    buttonType: type
+  };
+};
+
+export { addItem, deleteItem, updateItemsQuntity };
