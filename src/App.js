@@ -7,63 +7,11 @@ import Layout from "./component/common/Layout";
 import ProductItems from './component/ProductItems';
 import UserCart from "./component/UserCart";
 import authContext from './Context/authContext';
+import { DUMMAY_PRODUCTS } from './constants';
 
-const dummuyItems = [
-  {
-    id: 1,
-    name: "Electronic Car",
-    price: 1000,
-    packagingCharges: 0,
-    deliveryCharge: 0,
-    discount: 5,
-    category: "Test",
-    isCartItem: false
-  },
-  {
-    id: 2,
-    name: "teddy Bear",
-    price: 750,
-    packagingCharges: 0,
-    deliveryCharge: 0,
-    discount: 5,
-    category: "Test",
-    isCartItem: false
-  },
-  {
-    id: 3,
-    name: "Bag",
-    price: 1200,
-    packagingCharges: 0,
-    deliveryCharge: 0,
-    discount: 0,
-    category: "Test",
-    isCartItem: false
-  },
-  {
-    id: 4,
-    name: "Baby Bed",
-    price: 3600,
-    packagingCharges: 0,
-    deliveryCharge: 0,
-    discount: 10,
-    category: "Test",
-    isCartItem: false
-  },
-  {
-    id: 5,
-    name: "Chocolates",
-    price: 410,
-    packagingCharges: 0,
-    deliveryCharge: 0,
-    discount: 0,
-    category: "Test",
-    isCartItem: false
-  }
-];
 
 function App() {
-  const [products, setProducts] = useState(dummuyItems);
-  const UserContext = createContext();
+  const [products, setProducts] = useState(DUMMAY_PRODUCTS);
 
   useEffect(() => {
     setProducts(() => [...products]);

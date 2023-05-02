@@ -12,7 +12,8 @@ import PaymentOption from "./cartDetails/PaymentOption";
 
 const CART_DETAILS = { 
   addressDetails: {},
-  orderSummary: {}
+  orderSummary: {},
+  paymentDetails: {}
 }
 
 const UserCart = () => {
@@ -25,8 +26,6 @@ const UserCart = () => {
   const deleteItemHandler = (cartItem) => {
     dispatch(deleteItem(cartItem));
     deleteCartHandler(cartItem);
-
-    console.log(cartItems);
   }
 
   const onSaveAddressHandler = (data) => {
@@ -37,6 +36,11 @@ const UserCart = () => {
   const onOrderSummarySaved = (data) => {
     finalCheckoutResult.orderSummary = data;
     setFinalCheckoutResult((prevStat) => { return {...prevStat, orderSummary: finalCheckoutResult.orderSummary}});
+  }
+
+  const onPaymentDetailUpdate = (paymentOptions) => {
+    finalCheckoutResult.paymentDetails = paymentOptions;
+    setFinalCheckoutResult((prevStat) => { return {...prevStat, paymentDetails: finalCheckoutResult.paymentDetails}});
   }
 
   const onUpdateItemQuantity = (e, item) => {
@@ -94,7 +98,7 @@ const UserCart = () => {
               </h2>
               <div id="paymentOption" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div className="accordion-body">
-                  <PaymentOption cartItems={cartItems} onCheckout={onCheckout} />
+                  <PaymentOption cartItems={cartItems} onCheckout={onCheckout} onPaymentDetailUpdate={onPaymentDetailUpdate} />
                 </div>
               </div>
             </div>

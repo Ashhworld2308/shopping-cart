@@ -6,7 +6,7 @@ import _ from "lodash";
 const { debounce } = _;
 
 const PaymentOption = (props) => {
-    const { cartItems, onCheckout } = props;
+    const { cartItems, onCheckout, onPaymentDetailUpdate } = props;
     const [paymentOptions, setPaymentOptions] = useState(() => PAYMENT_OPTIONS);
     const [cartSummary, setCartSummary] = useState({})
     const [upipaymentSubmitStatus, setUpipaymentSubmitStatus] = useState(true);
@@ -17,7 +17,8 @@ const PaymentOption = (props) => {
     }, [cartItems]);
 
     const onVerifyHandler = () => {
-        setUpipaymentSubmitStatus(false)
+        setUpipaymentSubmitStatus(false);
+        onPaymentDetailUpdate(paymentOptions)
     }
 
     const delaySaveToDb = useCallback(
@@ -40,13 +41,10 @@ const PaymentOption = (props) => {
         }, 1000), []);
 
     const onPaymentOptionChange = (event) => {
-        console.log(event, event.target);
         debounceCall(event.target.id);
-        console.log(paymentOptions);
     }
 
     const onBankChangeHandler = (event, bank) => {
-        console.log(event.target.value, event.target);
         paymentOptions.netBanking.id = event.target.value;
         paymentOptions.netBanking.bankName = bank.bankName;
 

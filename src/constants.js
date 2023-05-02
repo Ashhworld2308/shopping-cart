@@ -1,3 +1,61 @@
+export const DUMMAY_PRODUCTS = [
+    {
+      id: 1,
+      name: "Electronic Car",
+      description: "SmallBoyToys Mercedes Battery Operated Ride on (1-5 Yrs) Bluetooth with Music, Lights, Safety Seat Belt, Bluetooth Remote Car Battery Operated Ride On  (White)", 
+      price: 1000,
+      packagingCharges: 0,
+      deliveryCharge: 0,
+      discount: 5,
+      category: "Test",
+      isCartItem: false
+    },
+    {
+      id: 2,
+      name: "teddy Bear",
+      description: "Red Teddy Approx 90 cm High Quality 3 Feet Teddy Bear for someone special 1 - 90 cm", 
+      price: 750,
+      packagingCharges: 0,
+      deliveryCharge: 0,
+      discount: 5,
+      category: "Test",
+      isCartItem: false
+    },
+    {
+      id: 3,
+      name: "Bag",
+      description: "Antil's Baby Carrier Bag Baby Carrier  (White & Blue, Back Carry)",
+      price: 1200,
+      packagingCharges: 0,
+      deliveryCharge: 0,
+      discount: 0,
+      category: "Test",
+      isCartItem: false
+    },
+    {
+      id: 4,
+      name: "Baby Bed",
+      description: " Cotton Baby Bed Sized Bedding Set", 
+      price: 3600,
+      packagingCharges: 0,
+      deliveryCharge: 0,
+      discount: 10,
+      category: "Test",
+      isCartItem: false
+    },
+    {
+      id: 5,
+      name: "Chocolates",
+      description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+      price: 410,
+      packagingCharges: 0,
+      deliveryCharge: 0,
+      discount: 0,
+      category: "Test",
+      isCartItem: false
+    }
+  ];
+
 export const bankLists = [
     {
         "id": 1,
@@ -330,7 +388,7 @@ export const PAYMENT_OPTIONS = {
         cardNumber: "",
         cardHolderName: "",
         cvv: "",
-        calidThru: ""
+        validThru: ""
     },
     cashOnDelivery: {
         isSelected: false

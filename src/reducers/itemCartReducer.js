@@ -18,7 +18,6 @@ const itemCartReducer = (state = initialState, action) => {
             else { cartItem.quantity -= 1; }
         }
         cartItem.totalPrice = cartItem.quantity * cartItem.price;
-        console.log(cartItem)
         return cartItem.quantity > 0 && cartItem;
     });
     default:
