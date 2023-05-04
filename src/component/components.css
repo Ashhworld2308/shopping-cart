@@ -93,7 +93,7 @@ a{
     font-size: 0.7rem;
 }
 img{
-    width: 3.5rem;
+    width: 1.5rem;
 }
 .back-to-shop{
     margin-top: 2.5rem;
@@ -221,4 +221,8 @@ a:hover{
 
 .discount-price {
     color: green;
+}
+
+.product-image {
+    height: 200px;
 }

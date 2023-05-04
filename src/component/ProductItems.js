@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import ProductItem from './ProductItem';
+import React, {useState, useEffect, Suspense, lazy} from 'react';
+const ProductItem = lazy(() => import("./ProductItem"));
 
 function ProductItems({products}) {
   const [searchValue, setSearchValue] = useState("");
@@ -14,7 +14,7 @@ function ProductItems({products}) {
     setSearchValue(value);
     
     const tempProducts = products.filter((item) => {
-      if (item.name.toLowerCase().includes(value.toLowerCase())) { return item; }
+      return item.name.toLowerCase().includes(value.toLowerCase()) && item;
     });
 
     setFilteredProducts(() => tempProducts);
@@ -25,8 +25,10 @@ function ProductItems({products}) {
             onChange={(event) => onSearchFilterHandler(event)} />
           </div>
           <div className="row">
+          <Suspense fallback={<div>Loading...</div>}>
             {!filteredProducts.length && <label>No Products Available</label>}
             {!!filteredProducts && filteredProducts.map((item, index) => <ProductItem item={item} key={index} />)}
+          </Suspense>
           </div>
         </div>);
 }

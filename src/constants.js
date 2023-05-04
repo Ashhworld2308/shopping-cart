@@ -1,62 +1,203 @@
-export const DUMMAY_PRODUCTS = [
+export const DUMMY_CAR_LIST = [
     {
-      id: 1,
-      name: "Electronic Car",
-      description: "SmallBoyToys Mercedes Battery Operated Ride on (1-5 Yrs) Bluetooth with Music, Lights, Safety Seat Belt, Bluetooth Remote Car Battery Operated Ride On  (White)", 
-      price: 1000,
-      packagingCharges: 0,
-      deliveryCharge: 0,
-      discount: 5,
-      category: "Test",
-      isCartItem: false
-    },
-    {
-      id: 2,
-      name: "teddy Bear",
-      description: "Red Teddy Approx 90 cm High Quality 3 Feet Teddy Bear for someone special 1 - 90 cm", 
-      price: 750,
-      packagingCharges: 0,
-      deliveryCharge: 0,
-      discount: 5,
-      category: "Test",
-      isCartItem: false
-    },
-    {
-      id: 3,
-      name: "Bag",
-      description: "Antil's Baby Carrier Bag Baby Carrier  (White & Blue, Back Carry)",
-      price: 1200,
-      packagingCharges: 0,
-      deliveryCharge: 0,
-      discount: 0,
-      category: "Test",
-      isCartItem: false
-    },
-    {
-      id: 4,
-      name: "Baby Bed",
-      description: " Cotton Baby Bed Sized Bedding Set", 
-      price: 3600,
-      packagingCharges: 0,
-      deliveryCharge: 0,
-      discount: 10,
-      category: "Test",
-      isCartItem: false
-    },
-    {
-      id: 5,
-      name: "Chocolates",
-      description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
-      price: 410,
-      packagingCharges: 0,
-      deliveryCharge: 0,
-      discount: 0,
-      category: "Test",
-      isCartItem: false
-    }
-  ];
+        id: 1,
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/2015_Mazda_MX-5_ND_2.0_SKYACTIV-G_160_i-ELOOP_Rubinrot-Metallic_Vorderansicht.jpg/400px-2015_Mazda_MX-5_ND_2.0_SKYACTIV-G_160_i-ELOOP_Rubinrot-Metallic_Vorderansicht.jpg",
+        name: "Mazda MX-5",
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        price: 318393,
+        packagingCharges: 0,
+        deliveryCharge: 0,
+        discount: 5,
+        startProduction: 1989,
+        isCartItem: false,
+        class: "Sports car Roadster",
 
-export const bankLists = [
+    },
+    {
+        id: 2,
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/2014_Porsche_Cayenne_%2892A_MY14%29_GTS_wagon_%282015-08-07%29_01.jpg/400px-2014_Porsche_Cayenne_%2892A_MY14%29_GTS_wagon_%282015-08-07%29_01.jpg",
+        name: "Porsche Cayenne",
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        price: 1203202,
+        packagingCharges: 0,
+        deliveryCharge: 0,
+        discount: 5,
+        startProduction: 2002,
+        isCartItem: false,
+        class: "Mid-size luxury crossover SUV"
+    },
+    {
+        id: 3,
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Vintage_car_at_the_Wirral_Bus_%26_Tram_Show_-_DSC03336.JPG/400px-Vintage_car_at_the_Wirral_Bus_%26_Tram_Show_-_DSC03336.JPG",
+        name: "Vauxhall Chevette",
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        price: 4100000,
+        packagingCharges: 0,
+        deliveryCharge: 0,
+        discount: 5,
+        startProduction: 1975,
+        isCartItem: false,
+        class: "Supermini"
+    },
+    {
+        id: 4,
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Dynamixion_car_by_Buckminster_Fuller_1933_%28side_views%29.jpg/400px-Dynamixion_car_by_Buckminster_Fuller_1933_%28side_views%29.jpg",
+        name: "Dymaxion car",
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        price: 1000000,
+        packagingCharges: 0,
+        deliveryCharge: 0,
+        discount: 5,
+        startProduction: 1933,
+        isCartItem: false,
+        class: "Concept car"
+    },
+    {
+        id: 5,
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Ford_Crown_Victoria_LX.jpg/400px-Ford_Crown_Victoria_LX.jpg",
+        name: "Ford Crown Victoria",
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        price: 3820000,
+        packagingCharges: 0,
+        deliveryCharge: 0,
+        discount: 5,
+        startProduction: 1955,
+        isCartItem: false,
+        class: "Full-size Ford"
+    },
+    {
+        id: 6,
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Plymouth_Superbird.jpg/400px-Plymouth_Superbird.jpg",
+        name: "Plymouth Superbird",
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        price: 2500000,
+        packagingCharges: 0,
+        deliveryCharge: 0,
+        discount: 10,
+        startProduction: 1970,
+        isCartItem: false,
+        class: "Muscle car(today) and Race car(Past)"
+    },
+    {
+        id: 7,
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/2nd-Saab-9000-hatch.jpg/400px-2nd-Saab-9000-hatch.jpg",
+        name: "Saab 9000",
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        price: 2875000,
+        packagingCharges: 0,
+        deliveryCharge: 0,
+        discount: 10,
+        startProduction: 1984,
+        isCartItem: false,
+        class: "Executive car"
+    },
+    {
+        id: 8,
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/2003-2005_Pontiac_Sunfire.jpg/400px-2003-2005_Pontiac_Sunfire.jpg",
+        name: "Pontiac Sunfire",
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        price: 3100000,
+        packagingCharges: 0,
+        deliveryCharge: 0,
+        discount: 10,
+        startProduction: 1994,
+        isCartItem: false,
+        class: "Compact"
+    },
+    {
+        id: 9,
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/1971_AMC_Javelin_SST_red_Kenosha_street.JPG/400px-1971_AMC_Javelin_SST_red_Kenosha_street.JPG",
+        name: "AMC Javelin",
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        price: 20000000,
+        packagingCharges: 0,
+        deliveryCharge: 0,
+        discount: 10,
+        startProduction: 1967,
+        isCartItem: false,
+        class: "{{Unbulleted list| Pony car | Muscle car },},"
+    },
+    {
+        id: 10,
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Jaguar_X-Type_Estate_front_20080731.jpg/400px-Jaguar_X-Type_Estate_front_20080731.jpg",
+        name: "Jaguar X-Type",
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        price: 1500000,
+        packagingCharges: 0,
+        deliveryCharge: 0,
+        discount: 10,
+        startProduction: 2001,
+        isCartItem: false,
+        class: "Compact executive car"
+    },
+    {
+        id: 11,
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/VW_Phaton_%282._Facelift%29_%E2%80%93_Frontansicht%2C_7._Mai_2011%2C_D%C3%BCsseldorf.jpg/400px-VW_Phaton_%282._Facelift%29_%E2%80%93_Frontansicht%2C_7._Mai_2011%2C_D%C3%BCsseldorf.jpg",
+        name: "Volkswagen Phaeton",
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        price: 1800000,
+        packagingCharges: 0,
+        deliveryCharge: 0,
+        discount: 2,
+        startProduction: 2002,
+        isCartItem: false,
+        class: "Full-size luxury car"
+    },
+    {
+        id: 12,
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Pontiac_G6.jpg/400px-Pontiac_G6.jpg",
+        name: "Pontiac G6",
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        price: 41023222,
+        packagingCharges: 0,
+        deliveryCharge: 0,
+        discount: 2,
+        startProduction: 2004,
+        isCartItem: false,
+        class: "Midsize"
+    },
+    {
+        id: 13,
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Ford500a.JPG/400px-Ford500a.JPG",
+        name: "Ford Five Hundred",
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        price: 610000,
+        packagingCharges: 0,
+        deliveryCharge: 0,
+        discount: 2,
+        startProduction: 2004,
+        isCartItem: false,
+        class: "Full-size"
+    },
+    {
+        id: 14,
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/PontiacSolstice.jpg/400px-PontiacSolstice.jpg",
+        name: "Pontiac Solstice",
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        price: 1298777,
+        packagingCharges: 0,
+        deliveryCharge: 0,
+        discount: 0,
+        startProduction: 2005,
+        isCartItem: false,
+        class: "Roadster, coupe"
+    },
+    {
+        id: 15,
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Fiat_tipo_f.jpg/400px-Fiat_tipo_f.jpg",
+        name: "Fiat Tipo",
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        price: 91000000,
+        packagingCharges: 0,
+        deliveryCharge: 0,
+        discount: 0,
+        startProduction: 1988,
+        isCartItem: false,
+        class: "Small family car"
+    }
+]
+
+export const BANK_LIST = [
     {
         "id": 1,
         "isPopular": false,
@@ -388,7 +529,8 @@ export const PAYMENT_OPTIONS = {
         cardNumber: "",
         cardHolderName: "",
         cvv: "",
-        validThru: ""
+        validThruMonth: "",
+        validThruYear: ""
     },
     cashOnDelivery: {
         isSelected: false

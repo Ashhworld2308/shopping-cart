@@ -7,17 +7,23 @@
     width: 50%;
     margin-top: 0;
     margin-right: 0;
-    /* height: 38px; */
+    height: 48px;
 }
 
 .month-dropdown-style {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    width: 75px;
+    margin-bottom: 0;
+    border: 1px solid #ced4da;
 }
 
 .year-dropdown-style {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    width: 75px;
+    margin-bottom: 0;
+    border: 1px solid #ced4da;
 }
 
 .upi-payment-option-button {

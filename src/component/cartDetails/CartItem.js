@@ -3,7 +3,7 @@ import React from "react";
 function CartItem({ item: cartItem, deleteItemHandler, onUpdateQuantity }) {
     return (<div className="row border border-top border-bottom display-container" key={CartItem.id}>
         <div className="row main align-items-center display-container">
-            <div className="col-sm-2"><img className="img-fluid" src="https://placehold.it/150x80?text=IMAGE" /></div>
+            <div className="col-sm-2"><img className="img-fluid" src={cartItem.image} alt={cartItem.name} /></div>
             <div className="col-sm-4">
                 <div className="row text-muted">{cartItem.name}</div>
             </div>

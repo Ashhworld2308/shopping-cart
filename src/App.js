@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Provider } from "react-redux";
@@ -7,11 +7,11 @@ import Layout from "./component/common/Layout";
 import ProductItems from './component/ProductItems';
 import UserCart from "./component/UserCart";
 import authContext from './Context/authContext';
-import { DUMMAY_PRODUCTS } from './constants';
+import { DUMMY_CAR_LIST } from './constants';
 
 
 function App() {
-  const [products, setProducts] = useState(DUMMAY_PRODUCTS);
+  const [products, setProducts] = useState(DUMMY_CAR_LIST);
 
   useEffect(() => {
     setProducts(() => [...products]);
@@ -19,7 +19,7 @@ function App() {
 
   const addToCartHandler = (item) => {
     const tempProducts = products.map((product) => {
-      if(item.id == product.id) {
+      if(item.id === product.id) {
         product.isCartItem = true;
       }
       return product;
@@ -30,7 +30,7 @@ function App() {
 
   const deleteToCartHandler = (item) => {
     const tempProducts = products.map((product) => {
-      if(item.id == product.id) {
+      if(item.id === product.id) {
         product.isCartItem = false;
       }
       return product;
