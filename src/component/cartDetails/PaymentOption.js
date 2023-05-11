@@ -10,7 +10,7 @@ import CODPaymentComponent from "./paymentComponents/CODPaymentComponent";
 const { debounce } = _;
 
 const PaymentOption = (props) => {
-    const { cartItems } = props;
+    const { cartItems, goToPreviousStep } = props;
     const [paymentOptions, setPaymentOptions] = useState(() => PAYMENT_OPTIONS);
     const [cartSummary, setCartSummary] = useState({})
     const [, updateState] = React.useState();
@@ -50,6 +50,12 @@ const PaymentOption = (props) => {
                     <CODPaymentComponent paymentOptions={paymentOptions} cartSummary={cartSummary} onPaymentOptionChange={onPaymentOptionChange} />
                 </li>
             </ul>
+                <div className="input-group mb-3">
+                    <button className="btn btn-sm btn-secondary" type="button"
+                        onClick={(e) => goToPreviousStep(e, "paymentOptions", "orderSummary")}>
+                        Go To OrderSummary
+                    </button>
+                </div>
         </form>
     </>
 }

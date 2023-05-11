@@ -2,7 +2,7 @@ import React from "react";
 import CartItem from "./CartItem";
 
 const OrderSummary = (props) => {
-    const { cartItems, deleteItemHandler, onUpdateItemQuantity, onOrderSummarySaved } = props;
+    const { cartItems, deleteItemHandler, onUpdateItemQuantity, onOrderSummarySaved, goToPreviousStep } = props;
     return <>
         {!cartItems.length && <span>No Items Selected Go To shopping</span>}
         {!!cartItems.length && <>
@@ -16,6 +16,12 @@ const OrderSummary = (props) => {
             </div>
         </>
         }
+        <div className="input-group mb-3">
+            <button className="btn btn-sm btn-secondary" type="button"
+                onClick={(e) => goToPreviousStep(e, "orderSummary", "deliveryAddress")}>
+                Go To OrderSummary
+            </button>
+        </div>
     </>
 }
 

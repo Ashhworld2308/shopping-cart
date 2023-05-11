@@ -1,5 +1,4 @@
 export const getCartValues = (cartItems) => {
-    console.log(cartItems);
     const TotalValue = cartItems.reduce((x, y) => x + y.totalPrice, 0);
     const discount = cartItems.reduce((x, y) => x + (y.totalPrice * y.discount) / 100, 0);
     const packageCharges = cartItems.reduce((x, y) => x + y.packagingCharges, 0);

@@ -56,3 +56,8 @@ footer {
 .cart-text-decoration {
   text-decoration: none;
 }
+
+.center-button {
+  position: absolute;
+  align-content: center;
+}

@@ -574,4 +574,17 @@ export const STATES = [
     "Uttarakhand",
     "Uttar Pradesh",
     "West Bengal"
-]
+];
+
+export const INITIAL_ADDRESS = {
+    name: "",
+    mobileNumber: "",
+    pincode: "",
+    locality: "",
+    address: "",
+    city: "",
+    state: "",
+    landmark: "",
+    alternetMobileNumber: "",
+    addressType: ""
+}
