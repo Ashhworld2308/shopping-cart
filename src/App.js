@@ -8,6 +8,7 @@ import ProductItems from './component/ProductItems';
 import UserCart from "./component/UserCart";
 import authContext from './Context/authContext';
 import { DUMMY_CAR_LIST } from './constants';
+import UserPurchaseSummary from './component/UserPurchaseSummary';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
             <Route path="/" element={<Layout />}> 
               <Route index element={<ProductItems products={products} />} />
               <Route path="cart" element={<UserCart />} />
+              <Route path="summary" element={<UserPurchaseSummary />} />
             </Route>
           </Routes>
         </BrowserRouter>

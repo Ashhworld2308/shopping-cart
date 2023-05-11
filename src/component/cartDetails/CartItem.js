@@ -3,7 +3,7 @@ import React from "react";
 function CartItem({ item: cartItem, deleteItemHandler, onUpdateQuantity }) {
     return (<div className="row border border-top border-bottom display-container" key={CartItem.id}>
         <div className="row main align-items-center display-container">
-            <div className="col-sm-2"><img className="img-fluid" src={cartItem.image} alt={cartItem.name} /></div>
+            <div className="col-sm-2"><img className="img-fluid" src={cartItem.image} alt={cartItem.name} height="90px" width="100px"/></div>
             <div className="col-sm-4">
                 <div className="row text-muted">{cartItem.name}</div>
             </div>
@@ -19,7 +19,7 @@ function CartItem({ item: cartItem, deleteItemHandler, onUpdateQuantity }) {
                     </button>
                 </div>
             </div>
-            <div className="col-sm-2 cart-price">&#8377; {cartItem.totalPrice}</div>
+            <div className="col-sm-2 cart-price">&#36; {cartItem.totalPrice}</div>
             <div className="col-sm-1">
                 <button type="button" className="btn btn-sm btn-outline-danger close"
                     onClick={() => deleteItemHandler(cartItem)}>&#10005;</button>

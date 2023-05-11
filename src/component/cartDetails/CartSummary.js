@@ -17,24 +17,24 @@ const CartSummary = (props) => {
         <hr />
         <div className="row">
             <div className="col total-items">Price ({cartItems.length} ITEMS)</div>
-            <div className="col text-right">&#8377; {summary.cartTotalValue}</div>
+            <div className="col text-right">&#36; {summary.cartTotalValue}</div>
         </div>
         <div className="row">
             <div className="col total-items">Discount</div>
-            <div className="col text-right discount-price">- &#8377; {summary.totalDiscount}</div>
+            <div className="col text-right discount-price">- &#36; {summary.totalDiscount}</div>
         </div>
         <div className="row">
             <div className="col total-items">Delivery Charges</div>
             {!summary.totalDeliveryCharges && <div className="col text-right discount-price"> Free </div>}
-            {summary.totalDeliveryCharges > 0 && <div className="col text-right">&#8377; {summary.totalDeliveryCharges}</div>}
+            {summary.totalDeliveryCharges > 0 && <div className="col text-right">&#36; {summary.totalDeliveryCharges}</div>}
         </div>
         <div className="row">
             <div className="col total-items">Secured Packaging Fee</div>
-            <div className="col text-right">&#8377; {summary.packagingCharges}</div>
+            <div className="col text-right">&#36; {summary.packagingCharges}</div>
         </div>
         <div className="row price-display">
             <div className="col total-items">TOTAL PRICE</div>
-            <div className="col text-right">&#8377; {finalTotal}</div>
+            <div className="col text-right">&#36; {finalTotal}</div>
         </div>
     </div>
 }

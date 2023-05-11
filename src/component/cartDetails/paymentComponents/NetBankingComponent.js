@@ -37,7 +37,7 @@ const NetBankingComponent = (props) => {
                     </div>;
             })}
             <div className="input-group mb-3">
-                <button className={upipaymentSubmitStatus ? "btn btn-disabled" : "btn btn-primary"} type="button" id="button-addon2" disabled={upipaymentSubmitStatus} onClick={(event) => onCheckout(event, netBanking)}>PAY &#8377;{cartSummary.finalCartValue}</button>
+                <button className={upipaymentSubmitStatus ? "btn btn-disabled" : "btn btn-primary"} type="button" id="button-addon2" disabled={upipaymentSubmitStatus} onClick={(event) => onCheckout(event, netBanking)}>PAY &#36;{cartSummary.finalCartValue}</button>
             </div>
         </div>
     </>

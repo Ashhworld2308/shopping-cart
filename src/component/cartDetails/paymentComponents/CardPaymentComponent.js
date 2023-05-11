@@ -112,7 +112,7 @@ const CardPaymentComponent = (props) => {
             </div>
             <div className="input-group mb-3">
                 <button className={checkoutEnabled ? "btn btn-disabled" : "btn btn-primary"} type="button" id="button-addon2"
-                    disabled={checkoutEnabled} onClick={(event) => onCheckout(event, cardPayment)}>PAY &#8377;{cartSummary.finalCartValue}</button>
+                    disabled={checkoutEnabled} onClick={(event) => onCheckout(event, cardPayment)}>PAY &#36;{cartSummary.finalCartValue}</button>
             </div>
         </div>
     </>

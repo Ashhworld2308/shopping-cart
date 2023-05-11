@@ -15,7 +15,7 @@
 }
 
 body{
-    background: #ddd;
+    background: #fff;
     min-height: 100vh;
 /*    vertical-align: middle;*/
 /*    display: flex;*/
@@ -93,7 +93,8 @@ a{
     font-size: 0.7rem;
 }
 img{
-    width: 1.5rem;
+    width: 100px;
+    height: 90px;
 }
 .back-to-shop{
     margin-top: 2.5rem;
@@ -221,6 +222,10 @@ a:hover{
 
 .discount-price {
     color: green;
+}
+
+.cart-value {
+    color: rgb(118, 36, 15);
 }
 
 .product-image {

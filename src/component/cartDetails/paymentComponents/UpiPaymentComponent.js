@@ -22,9 +22,7 @@ const UpiPaymentComponent = (props) => {
     return <>
         <input className="form-check-input me-1" type="radio" name="paymentoptions" value="upiPayment" id="upiPayment"
             onChange={onPaymentOptionChange} checked={upiPayment.isSelected} />
-        <label className="form-check-label">
-            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/batman-returns/logos/UPI.gif" /> UPI Payment
-        </label>
+        <label className="form-check-label">UPI Payment</label>
         <div className={!upiPayment.isSelected ? "d-none" : ""}>
             <div className="input-group mb-3">
                 <input type="text" className="form-control upi-payment-option-input" placeholder="Enter UPI ID" onChange={(e) => onUPIValidation(e)} />
@@ -32,7 +30,7 @@ const UpiPaymentComponent = (props) => {
                 {upipaymentSubmitStatus && <button className="btn btn-outline-secondary upi-payment-option-button" type="button" id="button-addon2" onClick={onVerifyHandler}>VERIFY</button>}
             </div>
             <div className="input-group mb-3">
-                <button className={upipaymentSubmitStatus ? "btn btn-disabled" : "btn btn-primary"} type="button" id="button-addon2" disabled={upipaymentSubmitStatus} onClick={(event) => onCheckout(event, upiPayment)}>PAY &#8377;{cartSummary.finalCartValue}</button>
+                <button className={upipaymentSubmitStatus ? "btn btn-disabled" : "btn btn-primary"} type="button" id="button-addon2" disabled={upipaymentSubmitStatus} onClick={(event) => onCheckout(event, upiPayment)}>PAY &#36;{cartSummary.finalCartValue}</button>
             </div>
         </div>
     </>

@@ -33,7 +33,7 @@ const ProductItem = (props) => {
               <div className="card-body">
                 {!item.isCartItem && <button type="button" disabled={item.isCartItem} className={item.isCartItem ? "btn btn-sm" : "btn btn-sm btn-primary"} onClick={onAddItem}>Add to Cart</button>}
                 {item.isCartItem && <button type="button" className="btn btn-sm" onClick={goToCart}>Go to Cart</button>}                 
-                <span className="item-price-style"><label>&#8377; {item.price}</label></span>
+                <span className="item-price-style"><label>&#36; {item.price}</label></span>
               </div>
             </div>
         </div>

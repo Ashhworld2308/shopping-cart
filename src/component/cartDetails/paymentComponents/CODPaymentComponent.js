@@ -20,7 +20,7 @@ const CODPaymentComponent = (props) => {
         <h6 className="mb-1">Scan & Pay using Cash, UPI and Cards at the time of Delivery.</h6>
         <div className={!paymentOptions.cashOnDelivery.isSelected ? "d-none row" : "row"}>
             <div className="input-group mb-3">
-                <button className="btn btn-primary" type="button" id="button-addon2" onClick={(event) => onCheckout(event, paymentOptions.cashOnDelivery)}>PAY &#8377;{cartSummary.finalCartValue}</button>
+                <button className="btn btn-primary" type="button" id="button-addon2" onClick={(event) => onCheckout(event, paymentOptions.cashOnDelivery)}>PAY &#36;{cartSummary.finalCartValue}</button>
             </div>
         </div>
     </>

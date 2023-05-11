@@ -80,7 +80,8 @@ const UserCart = () => {
 
   const onCheckout = (event, paymentData) => {
     console.log("finalCheckoutResult: ", finalCheckoutResult);
-    navigate("/");
+    localStorage.setItem("user_checkout_summary", JSON.stringify(finalCheckoutResult));
+    navigate("/summary");
   }
 
   const goToPreviousStep = (event, currenStep, PrevStep) => {
