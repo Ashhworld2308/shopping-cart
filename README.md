@@ -29,7 +29,7 @@ Launches the test runner in the interactive watch mode.\
 
 
 ### Home Page After Filter:
-![search filter - items display](https://user-images.githubusercontent.com/130346514/234380465-6b5c8f6c-69ce-465e-ac8e-14007b96d880.jpg)
+![filter](https://github.com/Ashhworld2308/shopping-cart/assets/130346514/1c6bfc12-8391-44e6-9631-cf4dd0ccc643)
 
 ### `User Cart Items:`
 
