@@ -23,13 +23,20 @@ Launches the test runner in the interactive watch mode.\
 ### App Screens:
 
 # Home Pages: Items Lists:
-![Cart - Home-Page](https://user-images.githubusercontent.com/130346514/234379122-d64338aa-a4e9-478a-a8ac-6f8346c9d442.jpg)
-![cart - Home page](https://user-images.githubusercontent.com/130346514/234380467-27c36986-1c27-4a89-b108-3b2671c0a855.jpg)
+
+
+![Shopping Product List](https://github.com/Ashhworld2308/shopping-cart/assets/130346514/494c4673-fa38-4756-a733-32dd2561fb8f)
+
 
 ### Home Page After Filter:
 ![search filter - items display](https://user-images.githubusercontent.com/130346514/234380465-6b5c8f6c-69ce-465e-ac8e-14007b96d880.jpg)
 
 ### `User Cart Items:`
-![Cart items display](https://user-images.githubusercontent.com/130346514/234380456-4d040da7-6bb7-4a42-bbd4-a51e3e3e0970.jpg)
+
+
+![Cart - Delivery Address details](https://github.com/Ashhworld2308/shopping-cart/assets/130346514/a6e8be0c-d65b-4034-b6f5-576763305dac)
+![Cart - Order Summary](https://github.com/Ashhworld2308/shopping-cart/assets/130346514/347dc281-1e08-48e4-a0bb-62583a23cf71)
+![Cart - Payment Options](https://github.com/Ashhworld2308/shopping-cart/assets/130346514/b5b9aee0-11de-4e58-9041-f93f704b664a)
+
 
 
