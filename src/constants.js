@@ -3,7 +3,7 @@ export const DUMMY_CAR_LIST = [
         id: 1,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/2015_Mazda_MX-5_ND_2.0_SKYACTIV-G_160_i-ELOOP_Rubinrot-Metallic_Vorderansicht.jpg/400px-2015_Mazda_MX-5_ND_2.0_SKYACTIV-G_160_i-ELOOP_Rubinrot-Metallic_Vorderansicht.jpg",
         name: "Mazda MX-5",
-        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)",
         price: 3183,
         packagingCharges: 0,
         deliveryCharge: 0,
@@ -17,7 +17,7 @@ export const DUMMY_CAR_LIST = [
         id: 2,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/2014_Porsche_Cayenne_%2892A_MY14%29_GTS_wagon_%282015-08-07%29_01.jpg/400px-2014_Porsche_Cayenne_%2892A_MY14%29_GTS_wagon_%282015-08-07%29_01.jpg",
         name: "Porsche Cayenne",
-        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)",
         price: 12032,
         packagingCharges: 0,
         deliveryCharge: 0,
@@ -30,7 +30,7 @@ export const DUMMY_CAR_LIST = [
         id: 3,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Vintage_car_at_the_Wirral_Bus_%26_Tram_Show_-_DSC03336.JPG/400px-Vintage_car_at_the_Wirral_Bus_%26_Tram_Show_-_DSC03336.JPG",
         name: "Vauxhall Chevette",
-        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)",
         price: 41000,
         packagingCharges: 0,
         deliveryCharge: 0,
@@ -43,7 +43,7 @@ export const DUMMY_CAR_LIST = [
         id: 4,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Dynamixion_car_by_Buckminster_Fuller_1933_%28side_views%29.jpg/400px-Dynamixion_car_by_Buckminster_Fuller_1933_%28side_views%29.jpg",
         name: "Dymaxion car",
-        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)",
         price: 1000,
         packagingCharges: 0,
         deliveryCharge: 0,
@@ -56,7 +56,7 @@ export const DUMMY_CAR_LIST = [
         id: 5,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Ford_Crown_Victoria_LX.jpg/400px-Ford_Crown_Victoria_LX.jpg",
         name: "Ford Crown Victoria",
-        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)",
         price: 3820,
         packagingCharges: 0,
         deliveryCharge: 0,
@@ -69,7 +69,7 @@ export const DUMMY_CAR_LIST = [
         id: 6,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Plymouth_Superbird.jpg/400px-Plymouth_Superbird.jpg",
         name: "Plymouth Superbird",
-        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)",
         price: 25000,
         packagingCharges: 0,
         deliveryCharge: 0,
@@ -82,7 +82,7 @@ export const DUMMY_CAR_LIST = [
         id: 7,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/2nd-Saab-9000-hatch.jpg/400px-2nd-Saab-9000-hatch.jpg",
         name: "Saab 9000",
-        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)",
         price: 28000,
         packagingCharges: 0,
         deliveryCharge: 0,
@@ -95,7 +95,7 @@ export const DUMMY_CAR_LIST = [
         id: 8,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/2003-2005_Pontiac_Sunfire.jpg/400px-2003-2005_Pontiac_Sunfire.jpg",
         name: "Pontiac Sunfire",
-        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)",
         price: 3100,
         packagingCharges: 0,
         deliveryCharge: 0,
@@ -108,7 +108,7 @@ export const DUMMY_CAR_LIST = [
         id: 9,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/1971_AMC_Javelin_SST_red_Kenosha_street.JPG/400px-1971_AMC_Javelin_SST_red_Kenosha_street.JPG",
         name: "AMC Javelin",
-        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)",
         price: 20000,
         packagingCharges: 0,
         deliveryCharge: 0,
@@ -121,7 +121,7 @@ export const DUMMY_CAR_LIST = [
         id: 10,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Jaguar_X-Type_Estate_front_20080731.jpg/400px-Jaguar_X-Type_Estate_front_20080731.jpg",
         name: "Jaguar X-Type",
-        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)",
         price: 1500,
         packagingCharges: 0,
         deliveryCharge: 0,
@@ -134,7 +134,7 @@ export const DUMMY_CAR_LIST = [
         id: 11,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/VW_Phaton_%282._Facelift%29_%E2%80%93_Frontansicht%2C_7._Mai_2011%2C_D%C3%BCsseldorf.jpg/400px-VW_Phaton_%282._Facelift%29_%E2%80%93_Frontansicht%2C_7._Mai_2011%2C_D%C3%BCsseldorf.jpg",
         name: "Volkswagen Phaeton",
-        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)",
         price: 1800,
         packagingCharges: 0,
         deliveryCharge: 0,
@@ -147,7 +147,7 @@ export const DUMMY_CAR_LIST = [
         id: 12,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Pontiac_G6.jpg/400px-Pontiac_G6.jpg",
         name: "Pontiac G6",
-        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)",
         price: 41022,
         packagingCharges: 0,
         deliveryCharge: 0,
@@ -160,7 +160,7 @@ export const DUMMY_CAR_LIST = [
         id: 13,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Ford500a.JPG/400px-Ford500a.JPG",
         name: "Ford Five Hundred",
-        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)",
         price: 61000,
         packagingCharges: 0,
         deliveryCharge: 0,
@@ -173,7 +173,7 @@ export const DUMMY_CAR_LIST = [
         id: 14,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/PontiacSolstice.jpg/400px-PontiacSolstice.jpg",
         name: "Pontiac Solstice",
-        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)",
         price: 1277,
         packagingCharges: 0,
         deliveryCharge: 0,
@@ -186,7 +186,7 @@ export const DUMMY_CAR_LIST = [
         id: 15,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Fiat_tipo_f.jpg/400px-Fiat_tipo_f.jpg",
         name: "Fiat Tipo",
-        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)", 
+        description: "Cadbury Dairy Milk Mahapack Bars  (12 x 55 g)",
         price: 9100,
         packagingCharges: 0,
         deliveryCharge: 0,
@@ -594,4 +594,23 @@ export const PAYMENT_TYPE_TITLE = {
     upiPayment: "Pay with UPI",
     netBanking: "Net banking Selected",
     cardPayment: "Credit / Debit Card selected:"
+}
+
+
+export const CART_DETAILS = {
+    addressDetails: {},
+    orderSummary: {},
+    paymentDetails: {}
+}
+
+export const CART_OPTIONS = {
+    deliveryAddress: {
+        isShow: true
+    },
+    orderSummary: {
+        isShow: false
+    },
+    paymentOptions: {
+        isShow: false
+    }
 }

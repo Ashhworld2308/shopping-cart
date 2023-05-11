@@ -11,24 +11,7 @@ import AddressDetails from "./cartDetails/AddressDetails";
 import PaymentOption from "./cartDetails/PaymentOption";
 import userCartContext from "../Context/userCartContext";
 import { useNavigate } from "react-router-dom/dist";
-
-const CART_DETAILS = {
-  addressDetails: {},
-  orderSummary: {},
-  paymentDetails: {}
-}
-
-const CART_OPTIONS = {
-  deliveryAddress: {
-    isShow: true
-  },
-  orderSummary: {
-    isShow: false
-  },
-  paymentOptions: {
-    isShow: false
-  }
-}
+import { CART_DETAILS, CART_OPTIONS } from "../constants";
 
 const UserCart = () => {
   const { deleteToCartHandler: deleteCartHandler } = useContext(authContext);

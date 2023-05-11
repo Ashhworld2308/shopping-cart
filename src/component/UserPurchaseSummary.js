@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { PAYMENT_TYPE_TITLE } from "../constants";
-import { getCartValues } from "../commonUtils";
+import { useNavigate } from "react-router-dom";
 
 const UserPurchaseSummary = (props) => {
     const PurchaseSummary = JSON.parse(localStorage.getItem("user_checkout_summary"));
     const [cartValue, getCartValue] = useState(0);
+    const navigate = useNavigate();
 
     console.log("PurchaseSummary", PurchaseSummary);
     useEffect(() => {
@@ -13,8 +14,9 @@ const UserPurchaseSummary = (props) => {
         getCartValue(TotalValue);
     }, []);
 
-    const onPlaceOrder = () => {
-
+    const onOk = () => {
+        navigate("/");
+        window.location.reload();
     }
 
     return <>
@@ -71,7 +73,8 @@ const UserPurchaseSummary = (props) => {
                     </li>
                     <li class="list-group-item">
                         <div className="row">
-                            <div className="col-md-2"><button className="btn btn-lg btn-warning" onClick={onPlaceOrder} data-bs-toggle="modal" data-bs-target="#exampleModal">Place Order</button>
+                            <div className="col-md-2"><button className="btn btn-lg btn-warning" 
+                            data-bs-toggle="modal" data-bs-target="#exampleModal">Place Order</button>
                             </div>
                             <div className="col-md-10">
                                 <p><span className="cart-value">Order Total: {cartValue}</span></p>
@@ -90,10 +93,10 @@ const UserPurchaseSummary = (props) => {
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            We have successfully Places Your order
+                            We have successfully placed your order
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" >OK</button>
+                            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onClick={onOk}>Ok</button>
                         </div>
                     </div>
                 </div>

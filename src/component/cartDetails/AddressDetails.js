@@ -91,7 +91,6 @@ const AddressDetails = (props) => {
             </div>
             <div className="col-12">
                 <button className="btn btn-lg btn-primary" type="submit" onClick={onSaveAddressSubmit}>Save And Deliver Here</button>
-                <button className="btn btn-lg btn-outline-dark" type="submit" onClick={onSaveAddressHandler}>Cancel</button>
             </div>
         </form>
     </>
