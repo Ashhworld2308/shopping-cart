@@ -7,7 +7,7 @@ export const getCartValues = (cartItems) => {
 
     return {
         cartTotalValue: TotalValue,
-        totalDiscount: discount,
+        totalDiscount: Math.round( discount * 100 + Number.EPSILON ) / 100,
         totalDeliveryCharges: deliveryCharge,
         packagingCharges: packageCharges,
         finalCartValue: finalCartValue

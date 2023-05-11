@@ -13,15 +13,13 @@ const OrderSummary = (props) => {
                 <button type="button" className="btn btn-primary" onClick={(e) => onOrderSummarySaved(cartItems)}>
                     Proceed to PAYMENT
                 </button>
+                <button className="btn btn-sm btn-secondary" type="button"
+                onClick={(e) => goToPreviousStep(e, "orderSummary", "deliveryAddress")}>
+                Go To Address Details
+            </button>
             </div>
         </>
         }
-        <div className="input-group mb-3">
-            <button className="btn btn-sm btn-secondary" type="button"
-                onClick={(e) => goToPreviousStep(e, "orderSummary", "deliveryAddress")}>
-                Go To OrderSummary
-            </button>
-        </div>
     </>
 }
 
